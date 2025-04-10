@@ -1,0 +1,65 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Aluno\LuizFernando\MIC1\simulation\qsim
+vDECODER_2x4
+Z1 IIOeCj_V:YLe][7JEOn9`O2
+Z2 VH^o8R0:>kHX3<0>z@bBcG0
+Z3 dC:\Users\Aluno\LuizFernando\MIC1\simulation\qsim
+Z4 w1743711090
+Z5 8MIC1.vo
+Z6 FMIC1.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@d@e@c@o@d@e@r_2x4
+!i10b 1
+Z10 !s100 MdhC_];B@WOF8Y?6dQA:j2
+!s85 0
+Z11 !s108 1743711095.363000
+Z12 !s107 MIC1.vo|
+Z13 !s90 -work|work|MIC1.vo|
+!s101 -O0
+vDECODER_2x4_vlg_check_tst
+!i10b 1
+!s100 SFOlN005o[W0fkBHX=R>00
+I7ii3LKdcBoIaDeSIgO50Z3
+Vk1R^PCL7SFGD<9[5M8X^]2
+R3
+Z14 w1743711088
+Z15 8MIC1.vt
+Z16 FMIC1.vt
+L0 59
+R7
+r1
+!s85 0
+31
+Z17 !s108 1743711095.689000
+Z18 !s107 MIC1.vt|
+Z19 !s90 -work|work|MIC1.vt|
+!s101 -O0
+R8
+n@d@e@c@o@d@e@r_2x4_vlg_check_tst
+vDECODER_2x4_vlg_sample_tst
+!i10b 1
+!s100 ^j5z31nm2M^:2WO=M^9Y`2
+I:SWLfJ@A93dP>Mh_DIYGS1
+VzAk@29Fdj=hJ<M=][ZYb:3
+R3
+R14
+R15
+R16
+L0 29
+R7
+r1
+!s85 0
+31
+R17
+R18
+R19
+!s101 -O0
+R8
+n@d@e@c@o@d@e@r_2x4_vlg_sample_tst
