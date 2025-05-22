@@ -1,5 +1,5 @@
 Simulator report for MIC1
-Tue May 20 16:10:05 2025
+Thu May 22 17:00:24 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -44,42 +44,43 @@ applicable agreement for further details.
 ; Type                        ; Value        ;
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
-; Simulation End Time         ; 1.0 us       ;
-; Simulation Netlist Size     ; 183 nodes    ;
-; Simulation Coverage         ;       0.00 % ;
-; Total Number of Transitions ; 0            ;
+; Simulation End Time         ; 1.75 us      ;
+; Simulation Netlist Size     ; 80 nodes     ;
+; Simulation Coverage         ;      75.00 % ;
+; Total Number of Transitions ; 511          ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone II   ;
+; Device                      ; EP2C5T144C6  ;
 +-----------------------------+--------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Simulator Settings                                                                                                                                   ;
-+--------------------------------------------------------------------------------------------+-----------------------------------------+---------------+
-; Option                                                                                     ; Setting                                 ; Default Value ;
-+--------------------------------------------------------------------------------------------+-----------------------------------------+---------------+
-; Simulation mode                                                                            ; Functional                              ; Timing        ;
-; Start time                                                                                 ; 0 ns                                    ; 0 ns          ;
-; Simulation results format                                                                  ; VWF                                     ;               ;
-; Vector input source                                                                        ; C:/Users/Aluno/bernardo/decoder_2x4.vwf ;               ;
-; Add pins automatically to simulation output waveforms                                      ; On                                      ; On            ;
-; Check outputs                                                                              ; Off                                     ; Off           ;
-; Report simulation coverage                                                                 ; On                                      ; On            ;
-; Display complete 1/0 value coverage report                                                 ; On                                      ; On            ;
-; Display missing 1-value coverage report                                                    ; On                                      ; On            ;
-; Display missing 0-value coverage report                                                    ; On                                      ; On            ;
-; Detect setup and hold time violations                                                      ; Off                                     ; Off           ;
-; Detect glitches                                                                            ; Off                                     ; Off           ;
-; Disable timing delays in Timing Simulation                                                 ; Off                                     ; Off           ;
-; Generate Signal Activity File                                                              ; Off                                     ; Off           ;
-; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                     ; Off           ;
-; Group bus channels in simulation results                                                   ; Off                                     ; Off           ;
-; Preserve fewer signal transitions to reduce memory requirements                            ; On                                      ; On            ;
-; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                              ; INPUT_EDGE    ;
-; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                     ; Off           ;
-; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                     ;               ;
-; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                    ; Auto          ;
-+--------------------------------------------------------------------------------------------+-----------------------------------------+---------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                        ;
++--------------------------------------------------------------------------------------------+----------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                      ; Default Value ;
++--------------------------------------------------------------------------------------------+----------------------------------------------+---------------+
+; Simulation mode                                                                            ; Timing                                       ; Timing        ;
+; Start time                                                                                 ; 0 ns                                         ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                          ;               ;
+; Vector input source                                                                        ; C:/Users/Aluno/LuizFernando/ULA_8bit_ADD.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                           ; On            ;
+; Check outputs                                                                              ; Off                                          ; Off           ;
+; Report simulation coverage                                                                 ; On                                           ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                           ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                           ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                           ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                          ; Off           ;
+; Detect glitches                                                                            ; Off                                          ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                          ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                          ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                          ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                          ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                           ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                   ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                          ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                          ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                         ; Auto          ;
++--------------------------------------------------------------------------------------------+----------------------------------------------+---------------+
 
 
 +----------------------+
@@ -94,406 +95,133 @@ Please use Quartus II 64-Bit to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;       0.00 % ;
-; Total nodes checked                                 ; 183          ;
-; Total output ports checked                          ; 183          ;
-; Total output ports with complete 1/0-value coverage ; 0            ;
-; Total output ports with no 1/0-value coverage       ; 183          ;
-; Total output ports with no 1-value coverage         ; 183          ;
-; Total output ports with no 0-value coverage         ; 183          ;
+; Total coverage as a percentage                      ;      75.00 % ;
+; Total nodes checked                                 ; 80           ;
+; Total output ports checked                          ; 80           ;
+; Total output ports with complete 1/0-value coverage ; 60           ;
+; Total output ports with no 1/0-value coverage       ; 12           ;
+; Total output ports with no 1-value coverage         ; 19           ;
+; Total output ports with no 0-value coverage         ; 13           ;
 +-----------------------------------------------------+--------------+
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+-------------------------------------------------+
-; Complete 1/0-Value Coverage                     ;
-+-----------+------------------+------------------+
-; Node Name ; Output Port Name ; Output Port Type ;
-+-----------+------------------+------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                ;
++------------------------------------------------------------+------------------------------------------------------------+------------------+
+; Node Name                                                  ; Output Port Name                                           ; Output Port Type ;
++------------------------------------------------------------+------------------------------------------------------------+------------------+
+; |ULA_8bit|ULA_1bit:inst8|inst4                             ; |ULA_8bit|ULA_1bit:inst8|inst4                             ; combout          ;
+; |ULA_8bit|ULA_1bit:inst8|inst1                             ; |ULA_8bit|ULA_1bit:inst8|inst1                             ; combout          ;
+; |ULA_8bit|ULA_1bit:inst7|inst4                             ; |ULA_8bit|ULA_1bit:inst7|inst4                             ; combout          ;
+; |ULA_8bit|ULA_1bit:inst7|inst1                             ; |ULA_8bit|ULA_1bit:inst7|inst1                             ; combout          ;
+; |ULA_8bit|ULA_1bit:inst6|inst4                             ; |ULA_8bit|ULA_1bit:inst6|inst4                             ; combout          ;
+; |ULA_8bit|ULA_1bit:inst6|inst1                             ; |ULA_8bit|ULA_1bit:inst6|inst1                             ; combout          ;
+; |ULA_8bit|ULA_1bit:inst5|inst4                             ; |ULA_8bit|ULA_1bit:inst5|inst4                             ; combout          ;
+; |ULA_8bit|ULA_1bit:inst5|inst1                             ; |ULA_8bit|ULA_1bit:inst5|inst1                             ; combout          ;
+; |ULA_8bit|ULA_1bit:inst4|inst4                             ; |ULA_8bit|ULA_1bit:inst4|inst4                             ; combout          ;
+; |ULA_8bit|ULA_1bit:inst4|inst1                             ; |ULA_8bit|ULA_1bit:inst4|inst1                             ; combout          ;
+; |ULA_8bit|ULA_1bit:inst3|inst4                             ; |ULA_8bit|ULA_1bit:inst3|inst4                             ; combout          ;
+; |ULA_8bit|ULA_1bit:inst3|inst1                             ; |ULA_8bit|ULA_1bit:inst3|inst1                             ; combout          ;
+; |ULA_8bit|ULA_1bit:inst2|inst4                             ; |ULA_8bit|ULA_1bit:inst2|inst4                             ; combout          ;
+; |ULA_8bit|ULA_1bit:inst2|inst1                             ; |ULA_8bit|ULA_1bit:inst2|inst1                             ; combout          ;
+; |ULA_8bit|ULA_1bit:inst|inst4                              ; |ULA_8bit|ULA_1bit:inst|inst4                              ; combout          ;
+; |ULA_8bit|ULA_1bit:inst|inst1                              ; |ULA_8bit|ULA_1bit:inst|inst1                              ; combout          ;
+; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst12  ; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst12  ; combout          ;
+; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst12 ; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst12 ; combout          ;
+; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst12 ; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst12 ; combout          ;
+; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst12 ; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst12 ; combout          ;
+; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst12 ; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst12 ; combout          ;
+; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst12 ; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst12 ; combout          ;
+; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst12 ; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst12 ; combout          ;
+; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst12 ; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst12 ; combout          ;
+; |ULA_8bit|ULA_1bit:inst8|soma~1                            ; |ULA_8bit|ULA_1bit:inst8|soma~1                            ; combout          ;
+; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst   ; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst   ; combout          ;
+; |ULA_8bit|ULA_1bit:inst7|soma~1                            ; |ULA_8bit|ULA_1bit:inst7|soma~1                            ; combout          ;
+; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst8  ; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst8  ; combout          ;
+; |ULA_8bit|ULA_1bit:inst6|soma~1                            ; |ULA_8bit|ULA_1bit:inst6|soma~1                            ; combout          ;
+; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst8  ; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst8  ; combout          ;
+; |ULA_8bit|ULA_1bit:inst5|soma~1                            ; |ULA_8bit|ULA_1bit:inst5|soma~1                            ; combout          ;
+; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst8  ; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst8  ; combout          ;
+; |ULA_8bit|ULA_1bit:inst4|soma~1                            ; |ULA_8bit|ULA_1bit:inst4|soma~1                            ; combout          ;
+; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst8  ; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst8  ; combout          ;
+; |ULA_8bit|ULA_1bit:inst3|soma~1                            ; |ULA_8bit|ULA_1bit:inst3|soma~1                            ; combout          ;
+; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst8  ; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst8  ; combout          ;
+; |ULA_8bit|ULA_1bit:inst2|soma~1                            ; |ULA_8bit|ULA_1bit:inst2|soma~1                            ; combout          ;
+; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst8   ; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst8   ; combout          ;
+; |ULA_8bit|ULA_1bit:inst|soma~1                             ; |ULA_8bit|ULA_1bit:inst|soma~1                             ; combout          ;
+; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst   ; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst   ; combout          ;
+; |ULA_8bit|COUT                                             ; |ULA_8bit|COUT                                             ; padio            ;
+; |ULA_8bit|OUTPUT[7]                                        ; |ULA_8bit|OUTPUT[7]                                        ; padio            ;
+; |ULA_8bit|OUTPUT[6]                                        ; |ULA_8bit|OUTPUT[6]                                        ; padio            ;
+; |ULA_8bit|OUTPUT[5]                                        ; |ULA_8bit|OUTPUT[5]                                        ; padio            ;
+; |ULA_8bit|OUTPUT[4]                                        ; |ULA_8bit|OUTPUT[4]                                        ; padio            ;
+; |ULA_8bit|OUTPUT[3]                                        ; |ULA_8bit|OUTPUT[3]                                        ; padio            ;
+; |ULA_8bit|OUTPUT[2]                                        ; |ULA_8bit|OUTPUT[2]                                        ; padio            ;
+; |ULA_8bit|OUTPUT[1]                                        ; |ULA_8bit|OUTPUT[1]                                        ; padio            ;
+; |ULA_8bit|OUTPUT[0]                                        ; |ULA_8bit|OUTPUT[0]                                        ; padio            ;
+; |ULA_8bit|ENA                                              ; |ULA_8bit|ENA~corein                                       ; combout          ;
+; |ULA_8bit|B[7]                                             ; |ULA_8bit|B[7]~corein                                      ; combout          ;
+; |ULA_8bit|ENB                                              ; |ULA_8bit|ENB~corein                                       ; combout          ;
+; |ULA_8bit|B[6]                                             ; |ULA_8bit|B[6]~corein                                      ; combout          ;
+; |ULA_8bit|B[5]                                             ; |ULA_8bit|B[5]~corein                                      ; combout          ;
+; |ULA_8bit|B[4]                                             ; |ULA_8bit|B[4]~corein                                      ; combout          ;
+; |ULA_8bit|B[3]                                             ; |ULA_8bit|B[3]~corein                                      ; combout          ;
+; |ULA_8bit|B[2]                                             ; |ULA_8bit|B[2]~corein                                      ; combout          ;
+; |ULA_8bit|B[1]                                             ; |ULA_8bit|B[1]~corein                                      ; combout          ;
+; |ULA_8bit|B[0]                                             ; |ULA_8bit|B[0]~corein                                      ; combout          ;
+; |ULA_8bit|CIN                                              ; |ULA_8bit|CIN~corein                                       ; combout          ;
++------------------------------------------------------------+------------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Missing 1-Value Coverage                                                                                                                   ;
-+------------------------------------------------------------+------------------------------------------------------------+------------------+
-; Node Name                                                  ; Output Port Name                                           ; Output Port Type ;
-+------------------------------------------------------------+------------------------------------------------------------+------------------+
-; |ULA_8bit|COUT                                             ; |ULA_8bit|COUT                                             ; pin_out          ;
-; |ULA_8bit|CIN                                              ; |ULA_8bit|CIN                                              ; out              ;
-; |ULA_8bit|INVA                                             ; |ULA_8bit|INVA                                             ; out              ;
-; |ULA_8bit|A[7]                                             ; |ULA_8bit|A[7]                                             ; out              ;
-; |ULA_8bit|A[6]                                             ; |ULA_8bit|A[6]                                             ; out              ;
-; |ULA_8bit|A[5]                                             ; |ULA_8bit|A[5]                                             ; out              ;
-; |ULA_8bit|A[4]                                             ; |ULA_8bit|A[4]                                             ; out              ;
-; |ULA_8bit|A[3]                                             ; |ULA_8bit|A[3]                                             ; out              ;
-; |ULA_8bit|A[2]                                             ; |ULA_8bit|A[2]                                             ; out              ;
-; |ULA_8bit|A[1]                                             ; |ULA_8bit|A[1]                                             ; out              ;
-; |ULA_8bit|A[0]                                             ; |ULA_8bit|A[0]                                             ; out              ;
-; |ULA_8bit|ENA                                              ; |ULA_8bit|ENA                                              ; out              ;
-; |ULA_8bit|B[7]                                             ; |ULA_8bit|B[7]                                             ; out              ;
-; |ULA_8bit|B[6]                                             ; |ULA_8bit|B[6]                                             ; out              ;
-; |ULA_8bit|B[5]                                             ; |ULA_8bit|B[5]                                             ; out              ;
-; |ULA_8bit|B[4]                                             ; |ULA_8bit|B[4]                                             ; out              ;
-; |ULA_8bit|B[3]                                             ; |ULA_8bit|B[3]                                             ; out              ;
-; |ULA_8bit|B[2]                                             ; |ULA_8bit|B[2]                                             ; out              ;
-; |ULA_8bit|B[1]                                             ; |ULA_8bit|B[1]                                             ; out              ;
-; |ULA_8bit|B[0]                                             ; |ULA_8bit|B[0]                                             ; out              ;
-; |ULA_8bit|ENB                                              ; |ULA_8bit|ENB                                              ; out              ;
-; |ULA_8bit|F1                                               ; |ULA_8bit|F1                                               ; out              ;
-; |ULA_8bit|F0                                               ; |ULA_8bit|F0                                               ; out              ;
-; |ULA_8bit|OUTPUT[7]                                        ; |ULA_8bit|OUTPUT[7]                                        ; pin_out          ;
-; |ULA_8bit|OUTPUT[6]                                        ; |ULA_8bit|OUTPUT[6]                                        ; pin_out          ;
-; |ULA_8bit|OUTPUT[5]                                        ; |ULA_8bit|OUTPUT[5]                                        ; pin_out          ;
-; |ULA_8bit|OUTPUT[4]                                        ; |ULA_8bit|OUTPUT[4]                                        ; pin_out          ;
-; |ULA_8bit|OUTPUT[3]                                        ; |ULA_8bit|OUTPUT[3]                                        ; pin_out          ;
-; |ULA_8bit|OUTPUT[2]                                        ; |ULA_8bit|OUTPUT[2]                                        ; pin_out          ;
-; |ULA_8bit|OUTPUT[1]                                        ; |ULA_8bit|OUTPUT[1]                                        ; pin_out          ;
-; |ULA_8bit|OUTPUT[0]                                        ; |ULA_8bit|OUTPUT[0]                                        ; pin_out          ;
-; |ULA_8bit|ULA_1bit:inst|soma                               ; |ULA_8bit|ULA_1bit:inst|soma                               ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|inst6                              ; |ULA_8bit|ULA_1bit:inst|inst6                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|inst5                              ; |ULA_8bit|ULA_1bit:inst|inst5                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|inst4                              ; |ULA_8bit|ULA_1bit:inst|inst4                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|inst3                              ; |ULA_8bit|ULA_1bit:inst|inst3                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|inst1                              ; |ULA_8bit|ULA_1bit:inst|inst1                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|inst8                              ; |ULA_8bit|ULA_1bit:inst|inst8                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|inst7                              ; |ULA_8bit|ULA_1bit:inst|inst7                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|inst9                              ; |ULA_8bit|ULA_1bit:inst|inst9                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst8   ; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst8   ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst7   ; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst7   ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst    ; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst    ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst12  ; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst12  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst10  ; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst10  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst11  ; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst11  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|DECODER_2x4:DECODDER|inst3         ; |ULA_8bit|ULA_1bit:inst|DECODER_2x4:DECODDER|inst3         ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|DECODER_2x4:DECODDER|inst4         ; |ULA_8bit|ULA_1bit:inst|DECODER_2x4:DECODDER|inst4         ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|DECODER_2x4:DECODDER|inst5         ; |ULA_8bit|ULA_1bit:inst|DECODER_2x4:DECODDER|inst5         ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|DECODER_2x4:DECODDER|inst6         ; |ULA_8bit|ULA_1bit:inst|DECODER_2x4:DECODDER|inst6         ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|soma                              ; |ULA_8bit|ULA_1bit:inst2|soma                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|inst6                             ; |ULA_8bit|ULA_1bit:inst2|inst6                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|inst5                             ; |ULA_8bit|ULA_1bit:inst2|inst5                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|inst4                             ; |ULA_8bit|ULA_1bit:inst2|inst4                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|inst3                             ; |ULA_8bit|ULA_1bit:inst2|inst3                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|inst1                             ; |ULA_8bit|ULA_1bit:inst2|inst1                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|inst8                             ; |ULA_8bit|ULA_1bit:inst2|inst8                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|inst7                             ; |ULA_8bit|ULA_1bit:inst2|inst7                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|inst9                             ; |ULA_8bit|ULA_1bit:inst2|inst9                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst8  ; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst8  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst7  ; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst7  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst   ; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst   ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst12 ; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst12 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst10 ; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst10 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst11 ; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst11 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|DECODER_2x4:DECODDER|inst3        ; |ULA_8bit|ULA_1bit:inst2|DECODER_2x4:DECODDER|inst3        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|DECODER_2x4:DECODDER|inst4        ; |ULA_8bit|ULA_1bit:inst2|DECODER_2x4:DECODDER|inst4        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|DECODER_2x4:DECODDER|inst5        ; |ULA_8bit|ULA_1bit:inst2|DECODER_2x4:DECODDER|inst5        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|DECODER_2x4:DECODDER|inst6        ; |ULA_8bit|ULA_1bit:inst2|DECODER_2x4:DECODDER|inst6        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|soma                              ; |ULA_8bit|ULA_1bit:inst3|soma                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|inst6                             ; |ULA_8bit|ULA_1bit:inst3|inst6                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|inst5                             ; |ULA_8bit|ULA_1bit:inst3|inst5                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|inst4                             ; |ULA_8bit|ULA_1bit:inst3|inst4                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|inst3                             ; |ULA_8bit|ULA_1bit:inst3|inst3                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|inst1                             ; |ULA_8bit|ULA_1bit:inst3|inst1                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|inst8                             ; |ULA_8bit|ULA_1bit:inst3|inst8                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|inst7                             ; |ULA_8bit|ULA_1bit:inst3|inst7                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|inst9                             ; |ULA_8bit|ULA_1bit:inst3|inst9                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst8  ; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst8  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst7  ; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst7  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst   ; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst   ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst12 ; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst12 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst10 ; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst10 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst11 ; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst11 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|DECODER_2x4:DECODDER|inst3        ; |ULA_8bit|ULA_1bit:inst3|DECODER_2x4:DECODDER|inst3        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|DECODER_2x4:DECODDER|inst4        ; |ULA_8bit|ULA_1bit:inst3|DECODER_2x4:DECODDER|inst4        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|DECODER_2x4:DECODDER|inst5        ; |ULA_8bit|ULA_1bit:inst3|DECODER_2x4:DECODDER|inst5        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|DECODER_2x4:DECODDER|inst6        ; |ULA_8bit|ULA_1bit:inst3|DECODER_2x4:DECODDER|inst6        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|soma                              ; |ULA_8bit|ULA_1bit:inst4|soma                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|inst6                             ; |ULA_8bit|ULA_1bit:inst4|inst6                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|inst5                             ; |ULA_8bit|ULA_1bit:inst4|inst5                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|inst4                             ; |ULA_8bit|ULA_1bit:inst4|inst4                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|inst3                             ; |ULA_8bit|ULA_1bit:inst4|inst3                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|inst1                             ; |ULA_8bit|ULA_1bit:inst4|inst1                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|inst8                             ; |ULA_8bit|ULA_1bit:inst4|inst8                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|inst7                             ; |ULA_8bit|ULA_1bit:inst4|inst7                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|inst9                             ; |ULA_8bit|ULA_1bit:inst4|inst9                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst8  ; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst8  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst7  ; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst7  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst   ; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst   ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst12 ; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst12 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst10 ; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst10 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst11 ; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst11 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|DECODER_2x4:DECODDER|inst3        ; |ULA_8bit|ULA_1bit:inst4|DECODER_2x4:DECODDER|inst3        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|DECODER_2x4:DECODDER|inst4        ; |ULA_8bit|ULA_1bit:inst4|DECODER_2x4:DECODDER|inst4        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|DECODER_2x4:DECODDER|inst5        ; |ULA_8bit|ULA_1bit:inst4|DECODER_2x4:DECODDER|inst5        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|DECODER_2x4:DECODDER|inst6        ; |ULA_8bit|ULA_1bit:inst4|DECODER_2x4:DECODDER|inst6        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|soma                              ; |ULA_8bit|ULA_1bit:inst5|soma                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|inst6                             ; |ULA_8bit|ULA_1bit:inst5|inst6                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|inst5                             ; |ULA_8bit|ULA_1bit:inst5|inst5                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|inst4                             ; |ULA_8bit|ULA_1bit:inst5|inst4                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|inst3                             ; |ULA_8bit|ULA_1bit:inst5|inst3                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|inst1                             ; |ULA_8bit|ULA_1bit:inst5|inst1                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|inst8                             ; |ULA_8bit|ULA_1bit:inst5|inst8                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|inst7                             ; |ULA_8bit|ULA_1bit:inst5|inst7                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|inst9                             ; |ULA_8bit|ULA_1bit:inst5|inst9                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst8  ; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst8  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst7  ; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst7  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst   ; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst   ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst12 ; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst12 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst10 ; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst10 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst11 ; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst11 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|DECODER_2x4:DECODDER|inst3        ; |ULA_8bit|ULA_1bit:inst5|DECODER_2x4:DECODDER|inst3        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|DECODER_2x4:DECODDER|inst4        ; |ULA_8bit|ULA_1bit:inst5|DECODER_2x4:DECODDER|inst4        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|DECODER_2x4:DECODDER|inst5        ; |ULA_8bit|ULA_1bit:inst5|DECODER_2x4:DECODDER|inst5        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|DECODER_2x4:DECODDER|inst6        ; |ULA_8bit|ULA_1bit:inst5|DECODER_2x4:DECODDER|inst6        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|soma                              ; |ULA_8bit|ULA_1bit:inst6|soma                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|inst6                             ; |ULA_8bit|ULA_1bit:inst6|inst6                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|inst5                             ; |ULA_8bit|ULA_1bit:inst6|inst5                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|inst4                             ; |ULA_8bit|ULA_1bit:inst6|inst4                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|inst3                             ; |ULA_8bit|ULA_1bit:inst6|inst3                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|inst1                             ; |ULA_8bit|ULA_1bit:inst6|inst1                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|inst8                             ; |ULA_8bit|ULA_1bit:inst6|inst8                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|inst7                             ; |ULA_8bit|ULA_1bit:inst6|inst7                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|inst9                             ; |ULA_8bit|ULA_1bit:inst6|inst9                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst8  ; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst8  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst7  ; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst7  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst   ; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst   ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst12 ; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst12 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst10 ; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst10 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst11 ; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst11 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|DECODER_2x4:DECODDER|inst3        ; |ULA_8bit|ULA_1bit:inst6|DECODER_2x4:DECODDER|inst3        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|DECODER_2x4:DECODDER|inst4        ; |ULA_8bit|ULA_1bit:inst6|DECODER_2x4:DECODDER|inst4        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|DECODER_2x4:DECODDER|inst5        ; |ULA_8bit|ULA_1bit:inst6|DECODER_2x4:DECODDER|inst5        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|DECODER_2x4:DECODDER|inst6        ; |ULA_8bit|ULA_1bit:inst6|DECODER_2x4:DECODDER|inst6        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|soma                              ; |ULA_8bit|ULA_1bit:inst7|soma                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|inst6                             ; |ULA_8bit|ULA_1bit:inst7|inst6                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|inst5                             ; |ULA_8bit|ULA_1bit:inst7|inst5                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|inst4                             ; |ULA_8bit|ULA_1bit:inst7|inst4                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|inst3                             ; |ULA_8bit|ULA_1bit:inst7|inst3                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|inst1                             ; |ULA_8bit|ULA_1bit:inst7|inst1                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|inst8                             ; |ULA_8bit|ULA_1bit:inst7|inst8                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|inst7                             ; |ULA_8bit|ULA_1bit:inst7|inst7                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|inst9                             ; |ULA_8bit|ULA_1bit:inst7|inst9                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst8  ; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst8  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst7  ; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst7  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst   ; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst   ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst12 ; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst12 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst10 ; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst10 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst11 ; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst11 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|DECODER_2x4:DECODDER|inst3        ; |ULA_8bit|ULA_1bit:inst7|DECODER_2x4:DECODDER|inst3        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|DECODER_2x4:DECODDER|inst4        ; |ULA_8bit|ULA_1bit:inst7|DECODER_2x4:DECODDER|inst4        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|DECODER_2x4:DECODDER|inst5        ; |ULA_8bit|ULA_1bit:inst7|DECODER_2x4:DECODDER|inst5        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|DECODER_2x4:DECODDER|inst6        ; |ULA_8bit|ULA_1bit:inst7|DECODER_2x4:DECODDER|inst6        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|soma                              ; |ULA_8bit|ULA_1bit:inst8|soma                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|inst6                             ; |ULA_8bit|ULA_1bit:inst8|inst6                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|inst5                             ; |ULA_8bit|ULA_1bit:inst8|inst5                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|inst4                             ; |ULA_8bit|ULA_1bit:inst8|inst4                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|inst3                             ; |ULA_8bit|ULA_1bit:inst8|inst3                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|inst1                             ; |ULA_8bit|ULA_1bit:inst8|inst1                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|inst8                             ; |ULA_8bit|ULA_1bit:inst8|inst8                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|inst7                             ; |ULA_8bit|ULA_1bit:inst8|inst7                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|inst9                             ; |ULA_8bit|ULA_1bit:inst8|inst9                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst8  ; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst8  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst7  ; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst7  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst   ; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst   ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst12 ; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst12 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst10 ; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst10 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst11 ; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst11 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|DECODER_2x4:DECODDER|inst3        ; |ULA_8bit|ULA_1bit:inst8|DECODER_2x4:DECODDER|inst3        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|DECODER_2x4:DECODDER|inst4        ; |ULA_8bit|ULA_1bit:inst8|DECODER_2x4:DECODDER|inst4        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|DECODER_2x4:DECODDER|inst5        ; |ULA_8bit|ULA_1bit:inst8|DECODER_2x4:DECODDER|inst5        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|DECODER_2x4:DECODDER|inst6        ; |ULA_8bit|ULA_1bit:inst8|DECODER_2x4:DECODDER|inst6        ; out0             ;
-+------------------------------------------------------------+------------------------------------------------------------+------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                       ;
++------------------------------------------------------+------------------------------------------------------+------------------+
+; Node Name                                            ; Output Port Name                                     ; Output Port Type ;
++------------------------------------------------------+------------------------------------------------------+------------------+
+; |ULA_8bit|ULA_1bit:inst|DECODER_2x4:DECODDER|inst5~0 ; |ULA_8bit|ULA_1bit:inst|DECODER_2x4:DECODDER|inst5~0 ; combout          ;
+; |ULA_8bit|ULA_1bit:inst8|soma~0                      ; |ULA_8bit|ULA_1bit:inst8|soma~0                      ; combout          ;
+; |ULA_8bit|ULA_1bit:inst7|soma~0                      ; |ULA_8bit|ULA_1bit:inst7|soma~0                      ; combout          ;
+; |ULA_8bit|ULA_1bit:inst6|soma~0                      ; |ULA_8bit|ULA_1bit:inst6|soma~0                      ; combout          ;
+; |ULA_8bit|ULA_1bit:inst5|soma~0                      ; |ULA_8bit|ULA_1bit:inst5|soma~0                      ; combout          ;
+; |ULA_8bit|ULA_1bit:inst4|soma~0                      ; |ULA_8bit|ULA_1bit:inst4|soma~0                      ; combout          ;
+; |ULA_8bit|ULA_1bit:inst3|soma~0                      ; |ULA_8bit|ULA_1bit:inst3|soma~0                      ; combout          ;
+; |ULA_8bit|ULA_1bit:inst2|soma~0                      ; |ULA_8bit|ULA_1bit:inst2|soma~0                      ; combout          ;
+; |ULA_8bit|ULA_1bit:inst|soma~0                       ; |ULA_8bit|ULA_1bit:inst|soma~0                       ; combout          ;
+; |ULA_8bit|F1                                         ; |ULA_8bit|F1~corein                                  ; combout          ;
+; |ULA_8bit|F0                                         ; |ULA_8bit|F0~corein                                  ; combout          ;
+; |ULA_8bit|A[7]                                       ; |ULA_8bit|A[7]~corein                                ; combout          ;
+; |ULA_8bit|A[6]                                       ; |ULA_8bit|A[6]~corein                                ; combout          ;
+; |ULA_8bit|A[5]                                       ; |ULA_8bit|A[5]~corein                                ; combout          ;
+; |ULA_8bit|A[4]                                       ; |ULA_8bit|A[4]~corein                                ; combout          ;
+; |ULA_8bit|A[3]                                       ; |ULA_8bit|A[3]~corein                                ; combout          ;
+; |ULA_8bit|A[2]                                       ; |ULA_8bit|A[2]~corein                                ; combout          ;
+; |ULA_8bit|A[1]                                       ; |ULA_8bit|A[1]~corein                                ; combout          ;
+; |ULA_8bit|A[0]                                       ; |ULA_8bit|A[0]~corein                                ; combout          ;
++------------------------------------------------------+------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Missing 0-Value Coverage                                                                                                                   ;
-+------------------------------------------------------------+------------------------------------------------------------+------------------+
-; Node Name                                                  ; Output Port Name                                           ; Output Port Type ;
-+------------------------------------------------------------+------------------------------------------------------------+------------------+
-; |ULA_8bit|COUT                                             ; |ULA_8bit|COUT                                             ; pin_out          ;
-; |ULA_8bit|CIN                                              ; |ULA_8bit|CIN                                              ; out              ;
-; |ULA_8bit|INVA                                             ; |ULA_8bit|INVA                                             ; out              ;
-; |ULA_8bit|A[7]                                             ; |ULA_8bit|A[7]                                             ; out              ;
-; |ULA_8bit|A[6]                                             ; |ULA_8bit|A[6]                                             ; out              ;
-; |ULA_8bit|A[5]                                             ; |ULA_8bit|A[5]                                             ; out              ;
-; |ULA_8bit|A[4]                                             ; |ULA_8bit|A[4]                                             ; out              ;
-; |ULA_8bit|A[3]                                             ; |ULA_8bit|A[3]                                             ; out              ;
-; |ULA_8bit|A[2]                                             ; |ULA_8bit|A[2]                                             ; out              ;
-; |ULA_8bit|A[1]                                             ; |ULA_8bit|A[1]                                             ; out              ;
-; |ULA_8bit|A[0]                                             ; |ULA_8bit|A[0]                                             ; out              ;
-; |ULA_8bit|ENA                                              ; |ULA_8bit|ENA                                              ; out              ;
-; |ULA_8bit|B[7]                                             ; |ULA_8bit|B[7]                                             ; out              ;
-; |ULA_8bit|B[6]                                             ; |ULA_8bit|B[6]                                             ; out              ;
-; |ULA_8bit|B[5]                                             ; |ULA_8bit|B[5]                                             ; out              ;
-; |ULA_8bit|B[4]                                             ; |ULA_8bit|B[4]                                             ; out              ;
-; |ULA_8bit|B[3]                                             ; |ULA_8bit|B[3]                                             ; out              ;
-; |ULA_8bit|B[2]                                             ; |ULA_8bit|B[2]                                             ; out              ;
-; |ULA_8bit|B[1]                                             ; |ULA_8bit|B[1]                                             ; out              ;
-; |ULA_8bit|B[0]                                             ; |ULA_8bit|B[0]                                             ; out              ;
-; |ULA_8bit|ENB                                              ; |ULA_8bit|ENB                                              ; out              ;
-; |ULA_8bit|F1                                               ; |ULA_8bit|F1                                               ; out              ;
-; |ULA_8bit|F0                                               ; |ULA_8bit|F0                                               ; out              ;
-; |ULA_8bit|OUTPUT[7]                                        ; |ULA_8bit|OUTPUT[7]                                        ; pin_out          ;
-; |ULA_8bit|OUTPUT[6]                                        ; |ULA_8bit|OUTPUT[6]                                        ; pin_out          ;
-; |ULA_8bit|OUTPUT[5]                                        ; |ULA_8bit|OUTPUT[5]                                        ; pin_out          ;
-; |ULA_8bit|OUTPUT[4]                                        ; |ULA_8bit|OUTPUT[4]                                        ; pin_out          ;
-; |ULA_8bit|OUTPUT[3]                                        ; |ULA_8bit|OUTPUT[3]                                        ; pin_out          ;
-; |ULA_8bit|OUTPUT[2]                                        ; |ULA_8bit|OUTPUT[2]                                        ; pin_out          ;
-; |ULA_8bit|OUTPUT[1]                                        ; |ULA_8bit|OUTPUT[1]                                        ; pin_out          ;
-; |ULA_8bit|OUTPUT[0]                                        ; |ULA_8bit|OUTPUT[0]                                        ; pin_out          ;
-; |ULA_8bit|ULA_1bit:inst|soma                               ; |ULA_8bit|ULA_1bit:inst|soma                               ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|inst6                              ; |ULA_8bit|ULA_1bit:inst|inst6                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|inst5                              ; |ULA_8bit|ULA_1bit:inst|inst5                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|inst4                              ; |ULA_8bit|ULA_1bit:inst|inst4                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|inst3                              ; |ULA_8bit|ULA_1bit:inst|inst3                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|inst1                              ; |ULA_8bit|ULA_1bit:inst|inst1                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|inst8                              ; |ULA_8bit|ULA_1bit:inst|inst8                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|inst7                              ; |ULA_8bit|ULA_1bit:inst|inst7                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|inst9                              ; |ULA_8bit|ULA_1bit:inst|inst9                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst8   ; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst8   ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst7   ; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst7   ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst    ; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst    ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst12  ; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst12  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst10  ; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst10  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst11  ; |ULA_8bit|ULA_1bit:inst|FULL_ADDER_1bit:FULL_ADDER|inst11  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|DECODER_2x4:DECODDER|inst3         ; |ULA_8bit|ULA_1bit:inst|DECODER_2x4:DECODDER|inst3         ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|DECODER_2x4:DECODDER|inst4         ; |ULA_8bit|ULA_1bit:inst|DECODER_2x4:DECODDER|inst4         ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|DECODER_2x4:DECODDER|inst5         ; |ULA_8bit|ULA_1bit:inst|DECODER_2x4:DECODDER|inst5         ; out0             ;
-; |ULA_8bit|ULA_1bit:inst|DECODER_2x4:DECODDER|inst6         ; |ULA_8bit|ULA_1bit:inst|DECODER_2x4:DECODDER|inst6         ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|soma                              ; |ULA_8bit|ULA_1bit:inst2|soma                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|inst6                             ; |ULA_8bit|ULA_1bit:inst2|inst6                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|inst5                             ; |ULA_8bit|ULA_1bit:inst2|inst5                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|inst4                             ; |ULA_8bit|ULA_1bit:inst2|inst4                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|inst3                             ; |ULA_8bit|ULA_1bit:inst2|inst3                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|inst1                             ; |ULA_8bit|ULA_1bit:inst2|inst1                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|inst8                             ; |ULA_8bit|ULA_1bit:inst2|inst8                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|inst7                             ; |ULA_8bit|ULA_1bit:inst2|inst7                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|inst9                             ; |ULA_8bit|ULA_1bit:inst2|inst9                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst8  ; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst8  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst7  ; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst7  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst   ; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst   ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst12 ; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst12 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst10 ; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst10 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst11 ; |ULA_8bit|ULA_1bit:inst2|FULL_ADDER_1bit:FULL_ADDER|inst11 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|DECODER_2x4:DECODDER|inst3        ; |ULA_8bit|ULA_1bit:inst2|DECODER_2x4:DECODDER|inst3        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|DECODER_2x4:DECODDER|inst4        ; |ULA_8bit|ULA_1bit:inst2|DECODER_2x4:DECODDER|inst4        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|DECODER_2x4:DECODDER|inst5        ; |ULA_8bit|ULA_1bit:inst2|DECODER_2x4:DECODDER|inst5        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst2|DECODER_2x4:DECODDER|inst6        ; |ULA_8bit|ULA_1bit:inst2|DECODER_2x4:DECODDER|inst6        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|soma                              ; |ULA_8bit|ULA_1bit:inst3|soma                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|inst6                             ; |ULA_8bit|ULA_1bit:inst3|inst6                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|inst5                             ; |ULA_8bit|ULA_1bit:inst3|inst5                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|inst4                             ; |ULA_8bit|ULA_1bit:inst3|inst4                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|inst3                             ; |ULA_8bit|ULA_1bit:inst3|inst3                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|inst1                             ; |ULA_8bit|ULA_1bit:inst3|inst1                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|inst8                             ; |ULA_8bit|ULA_1bit:inst3|inst8                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|inst7                             ; |ULA_8bit|ULA_1bit:inst3|inst7                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|inst9                             ; |ULA_8bit|ULA_1bit:inst3|inst9                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst8  ; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst8  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst7  ; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst7  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst   ; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst   ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst12 ; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst12 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst10 ; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst10 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst11 ; |ULA_8bit|ULA_1bit:inst3|FULL_ADDER_1bit:FULL_ADDER|inst11 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|DECODER_2x4:DECODDER|inst3        ; |ULA_8bit|ULA_1bit:inst3|DECODER_2x4:DECODDER|inst3        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|DECODER_2x4:DECODDER|inst4        ; |ULA_8bit|ULA_1bit:inst3|DECODER_2x4:DECODDER|inst4        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|DECODER_2x4:DECODDER|inst5        ; |ULA_8bit|ULA_1bit:inst3|DECODER_2x4:DECODDER|inst5        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst3|DECODER_2x4:DECODDER|inst6        ; |ULA_8bit|ULA_1bit:inst3|DECODER_2x4:DECODDER|inst6        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|soma                              ; |ULA_8bit|ULA_1bit:inst4|soma                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|inst6                             ; |ULA_8bit|ULA_1bit:inst4|inst6                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|inst5                             ; |ULA_8bit|ULA_1bit:inst4|inst5                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|inst4                             ; |ULA_8bit|ULA_1bit:inst4|inst4                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|inst3                             ; |ULA_8bit|ULA_1bit:inst4|inst3                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|inst1                             ; |ULA_8bit|ULA_1bit:inst4|inst1                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|inst8                             ; |ULA_8bit|ULA_1bit:inst4|inst8                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|inst7                             ; |ULA_8bit|ULA_1bit:inst4|inst7                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|inst9                             ; |ULA_8bit|ULA_1bit:inst4|inst9                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst8  ; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst8  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst7  ; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst7  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst   ; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst   ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst12 ; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst12 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst10 ; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst10 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst11 ; |ULA_8bit|ULA_1bit:inst4|FULL_ADDER_1bit:FULL_ADDER|inst11 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|DECODER_2x4:DECODDER|inst3        ; |ULA_8bit|ULA_1bit:inst4|DECODER_2x4:DECODDER|inst3        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|DECODER_2x4:DECODDER|inst4        ; |ULA_8bit|ULA_1bit:inst4|DECODER_2x4:DECODDER|inst4        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|DECODER_2x4:DECODDER|inst5        ; |ULA_8bit|ULA_1bit:inst4|DECODER_2x4:DECODDER|inst5        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst4|DECODER_2x4:DECODDER|inst6        ; |ULA_8bit|ULA_1bit:inst4|DECODER_2x4:DECODDER|inst6        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|soma                              ; |ULA_8bit|ULA_1bit:inst5|soma                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|inst6                             ; |ULA_8bit|ULA_1bit:inst5|inst6                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|inst5                             ; |ULA_8bit|ULA_1bit:inst5|inst5                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|inst4                             ; |ULA_8bit|ULA_1bit:inst5|inst4                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|inst3                             ; |ULA_8bit|ULA_1bit:inst5|inst3                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|inst1                             ; |ULA_8bit|ULA_1bit:inst5|inst1                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|inst8                             ; |ULA_8bit|ULA_1bit:inst5|inst8                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|inst7                             ; |ULA_8bit|ULA_1bit:inst5|inst7                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|inst9                             ; |ULA_8bit|ULA_1bit:inst5|inst9                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst8  ; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst8  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst7  ; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst7  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst   ; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst   ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst12 ; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst12 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst10 ; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst10 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst11 ; |ULA_8bit|ULA_1bit:inst5|FULL_ADDER_1bit:FULL_ADDER|inst11 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|DECODER_2x4:DECODDER|inst3        ; |ULA_8bit|ULA_1bit:inst5|DECODER_2x4:DECODDER|inst3        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|DECODER_2x4:DECODDER|inst4        ; |ULA_8bit|ULA_1bit:inst5|DECODER_2x4:DECODDER|inst4        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|DECODER_2x4:DECODDER|inst5        ; |ULA_8bit|ULA_1bit:inst5|DECODER_2x4:DECODDER|inst5        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst5|DECODER_2x4:DECODDER|inst6        ; |ULA_8bit|ULA_1bit:inst5|DECODER_2x4:DECODDER|inst6        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|soma                              ; |ULA_8bit|ULA_1bit:inst6|soma                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|inst6                             ; |ULA_8bit|ULA_1bit:inst6|inst6                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|inst5                             ; |ULA_8bit|ULA_1bit:inst6|inst5                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|inst4                             ; |ULA_8bit|ULA_1bit:inst6|inst4                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|inst3                             ; |ULA_8bit|ULA_1bit:inst6|inst3                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|inst1                             ; |ULA_8bit|ULA_1bit:inst6|inst1                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|inst8                             ; |ULA_8bit|ULA_1bit:inst6|inst8                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|inst7                             ; |ULA_8bit|ULA_1bit:inst6|inst7                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|inst9                             ; |ULA_8bit|ULA_1bit:inst6|inst9                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst8  ; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst8  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst7  ; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst7  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst   ; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst   ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst12 ; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst12 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst10 ; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst10 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst11 ; |ULA_8bit|ULA_1bit:inst6|FULL_ADDER_1bit:FULL_ADDER|inst11 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|DECODER_2x4:DECODDER|inst3        ; |ULA_8bit|ULA_1bit:inst6|DECODER_2x4:DECODDER|inst3        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|DECODER_2x4:DECODDER|inst4        ; |ULA_8bit|ULA_1bit:inst6|DECODER_2x4:DECODDER|inst4        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|DECODER_2x4:DECODDER|inst5        ; |ULA_8bit|ULA_1bit:inst6|DECODER_2x4:DECODDER|inst5        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst6|DECODER_2x4:DECODDER|inst6        ; |ULA_8bit|ULA_1bit:inst6|DECODER_2x4:DECODDER|inst6        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|soma                              ; |ULA_8bit|ULA_1bit:inst7|soma                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|inst6                             ; |ULA_8bit|ULA_1bit:inst7|inst6                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|inst5                             ; |ULA_8bit|ULA_1bit:inst7|inst5                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|inst4                             ; |ULA_8bit|ULA_1bit:inst7|inst4                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|inst3                             ; |ULA_8bit|ULA_1bit:inst7|inst3                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|inst1                             ; |ULA_8bit|ULA_1bit:inst7|inst1                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|inst8                             ; |ULA_8bit|ULA_1bit:inst7|inst8                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|inst7                             ; |ULA_8bit|ULA_1bit:inst7|inst7                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|inst9                             ; |ULA_8bit|ULA_1bit:inst7|inst9                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst8  ; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst8  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst7  ; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst7  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst   ; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst   ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst12 ; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst12 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst10 ; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst10 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst11 ; |ULA_8bit|ULA_1bit:inst7|FULL_ADDER_1bit:FULL_ADDER|inst11 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|DECODER_2x4:DECODDER|inst3        ; |ULA_8bit|ULA_1bit:inst7|DECODER_2x4:DECODDER|inst3        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|DECODER_2x4:DECODDER|inst4        ; |ULA_8bit|ULA_1bit:inst7|DECODER_2x4:DECODDER|inst4        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|DECODER_2x4:DECODDER|inst5        ; |ULA_8bit|ULA_1bit:inst7|DECODER_2x4:DECODDER|inst5        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst7|DECODER_2x4:DECODDER|inst6        ; |ULA_8bit|ULA_1bit:inst7|DECODER_2x4:DECODDER|inst6        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|soma                              ; |ULA_8bit|ULA_1bit:inst8|soma                              ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|inst6                             ; |ULA_8bit|ULA_1bit:inst8|inst6                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|inst5                             ; |ULA_8bit|ULA_1bit:inst8|inst5                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|inst4                             ; |ULA_8bit|ULA_1bit:inst8|inst4                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|inst3                             ; |ULA_8bit|ULA_1bit:inst8|inst3                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|inst1                             ; |ULA_8bit|ULA_1bit:inst8|inst1                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|inst8                             ; |ULA_8bit|ULA_1bit:inst8|inst8                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|inst7                             ; |ULA_8bit|ULA_1bit:inst8|inst7                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|inst9                             ; |ULA_8bit|ULA_1bit:inst8|inst9                             ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst8  ; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst8  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst7  ; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst7  ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst   ; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst   ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst12 ; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst12 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst10 ; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst10 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst11 ; |ULA_8bit|ULA_1bit:inst8|FULL_ADDER_1bit:FULL_ADDER|inst11 ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|DECODER_2x4:DECODDER|inst3        ; |ULA_8bit|ULA_1bit:inst8|DECODER_2x4:DECODDER|inst3        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|DECODER_2x4:DECODDER|inst4        ; |ULA_8bit|ULA_1bit:inst8|DECODER_2x4:DECODDER|inst4        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|DECODER_2x4:DECODDER|inst5        ; |ULA_8bit|ULA_1bit:inst8|DECODER_2x4:DECODDER|inst5        ; out0             ;
-; |ULA_8bit|ULA_1bit:inst8|DECODER_2x4:DECODDER|inst6        ; |ULA_8bit|ULA_1bit:inst8|DECODER_2x4:DECODDER|inst6        ; out0             ;
-+------------------------------------------------------------+------------------------------------------------------------+------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                       ;
++------------------------------------------------------+------------------------------------------------------+------------------+
+; Node Name                                            ; Output Port Name                                     ; Output Port Type ;
++------------------------------------------------------+------------------------------------------------------+------------------+
+; |ULA_8bit|ULA_1bit:inst|DECODER_2x4:DECODDER|inst5~0 ; |ULA_8bit|ULA_1bit:inst|DECODER_2x4:DECODDER|inst5~0 ; combout          ;
+; |ULA_8bit|ULA_1bit:inst8|soma~0                      ; |ULA_8bit|ULA_1bit:inst8|soma~0                      ; combout          ;
+; |ULA_8bit|ULA_1bit:inst7|soma~0                      ; |ULA_8bit|ULA_1bit:inst7|soma~0                      ; combout          ;
+; |ULA_8bit|ULA_1bit:inst6|soma~0                      ; |ULA_8bit|ULA_1bit:inst6|soma~0                      ; combout          ;
+; |ULA_8bit|ULA_1bit:inst5|soma~0                      ; |ULA_8bit|ULA_1bit:inst5|soma~0                      ; combout          ;
+; |ULA_8bit|ULA_1bit:inst4|soma~0                      ; |ULA_8bit|ULA_1bit:inst4|soma~0                      ; combout          ;
+; |ULA_8bit|ULA_1bit:inst3|soma~0                      ; |ULA_8bit|ULA_1bit:inst3|soma~0                      ; combout          ;
+; |ULA_8bit|ULA_1bit:inst2|soma~0                      ; |ULA_8bit|ULA_1bit:inst2|soma~0                      ; combout          ;
+; |ULA_8bit|ULA_1bit:inst|soma~0                       ; |ULA_8bit|ULA_1bit:inst|soma~0                       ; combout          ;
+; |ULA_8bit|F1                                         ; |ULA_8bit|F1~corein                                  ; combout          ;
+; |ULA_8bit|F0                                         ; |ULA_8bit|F0~corein                                  ; combout          ;
+; |ULA_8bit|INVA                                       ; |ULA_8bit|INVA~corein                                ; combout          ;
+; |ULA_8bit|A[0]                                       ; |ULA_8bit|A[0]~corein                                ; combout          ;
++------------------------------------------------------+------------------------------------------------------+------------------+
 
 
 +---------------------+
@@ -509,47 +237,19 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Simulator
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue May 20 16:10:05 2025
+    Info: Processing started: Thu May 22 17:00:23 2025
 Info: Command: quartus_sim --simulation_results_format=VWF MIC1 -c MIC1
-Info (324025): Using vector source file "C:/Users/Aluno/bernardo/decoder_2x4.vwf"
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "I0" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "I1" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "O0" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "O1" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "O2" in design.
-Warning (328013): Ignored node in vector source file. Can't find corresponding node name "O3" in design.
-Warning (328012): Can't find signal in vector source file for input pin "|ULA_8bit|CIN"
-Warning (328012): Can't find signal in vector source file for input pin "|ULA_8bit|INVA"
-Warning (328012): Can't find signal in vector source file for input pin "|ULA_8bit|A[7]"
-Warning (328012): Can't find signal in vector source file for input pin "|ULA_8bit|A[6]"
-Warning (328012): Can't find signal in vector source file for input pin "|ULA_8bit|A[5]"
-Warning (328012): Can't find signal in vector source file for input pin "|ULA_8bit|A[4]"
-Warning (328012): Can't find signal in vector source file for input pin "|ULA_8bit|A[3]"
-Warning (328012): Can't find signal in vector source file for input pin "|ULA_8bit|A[2]"
-Warning (328012): Can't find signal in vector source file for input pin "|ULA_8bit|A[1]"
-Warning (328012): Can't find signal in vector source file for input pin "|ULA_8bit|A[0]"
-Warning (328012): Can't find signal in vector source file for input pin "|ULA_8bit|ENA"
-Warning (328012): Can't find signal in vector source file for input pin "|ULA_8bit|B[7]"
-Warning (328012): Can't find signal in vector source file for input pin "|ULA_8bit|B[6]"
-Warning (328012): Can't find signal in vector source file for input pin "|ULA_8bit|B[5]"
-Warning (328012): Can't find signal in vector source file for input pin "|ULA_8bit|B[4]"
-Warning (328012): Can't find signal in vector source file for input pin "|ULA_8bit|B[3]"
-Warning (328012): Can't find signal in vector source file for input pin "|ULA_8bit|B[2]"
-Warning (328012): Can't find signal in vector source file for input pin "|ULA_8bit|B[1]"
-Warning (328012): Can't find signal in vector source file for input pin "|ULA_8bit|B[0]"
-Warning (328012): Can't find signal in vector source file for input pin "|ULA_8bit|ENB"
-Warning (328012): Can't find signal in vector source file for input pin "|ULA_8bit|F1"
-Warning (328012): Can't find signal in vector source file for input pin "|ULA_8bit|F0"
+Info (324025): Using vector source file "C:/Users/Aluno/LuizFernando/ULA_8bit_ADD.vwf"
 Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info (310002): Simulation partitioned into 1 sub-simulations
-Info (328053): Simulation coverage is       0.00 %
-Info (328052): Number of transitions in simulation is 0
+Info (328053): Simulation coverage is      75.00 %
+Info (328052): Number of transitions in simulation is 511
 Info (324045): Vector file MIC1.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
-Info: Quartus II 64-Bit Simulator was successful. 0 errors, 28 warnings
-    Info: Peak virtual memory: 4446 megabytes
-    Info: Processing ended: Tue May 20 16:10:05 2025
-    Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:00
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4467 megabytes
+    Info: Processing ended: Thu May 22 17:00:24 2025
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 

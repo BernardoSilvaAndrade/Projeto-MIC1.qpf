@@ -1,5 +1,5 @@
 Flow report for MIC1
-Tue May 20 16:33:55 2025
+Thu May 22 17:17:40 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,16 +40,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Tue May 20 16:33:55 2025           ;
+; Flow Status                        ; Successful - Thu May 22 17:17:40 2025           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; MIC1                                            ;
-; Top-level Entity Name              ; DECODER_2x4                                     ;
+; Top-level Entity Name              ; ULA_8bit                                        ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 4 / 4,608 ( < 1 % )                             ;
-;     Total combinational functions  ; 4 / 4,608 ( < 1 % )                             ;
+; Total logic elements               ; 49 / 4,608 ( 1 % )                              ;
+;     Total combinational functions  ; 49 / 4,608 ( 1 % )                              ;
 ;     Dedicated logic registers      ; 0 / 4,608 ( 0 % )                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 6 / 89 ( 7 % )                                  ;
+; Total pins                         ; 31 / 89 ( 35 % )                                ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 119,808 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 26 ( 0 % )                                  ;
@@ -64,28 +64,28 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/20/2025 16:33:49 ;
+; Start date & time ; 05/22/2025 17:17:21 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MIC1                ;
 +-------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                     ;
-+-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 171983378107723.174776962908312 ; --            ; --          ; --             ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                             ; --            ; --          ; eda_simulation ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                     ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)       ; <None>        ; --          ; --             ;
-; EDA_TIME_SCALE                      ; 1 ps                            ; --            ; --          ; eda_simulation ;
-; PARTITION_COLOR                     ; 16764057                        ; --            ; DECODER_2x4 ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; DECODER_2x4 ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; DECODER_2x4 ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; DECODER_2x4                     ; MIC1          ; --          ; --             ;
-+-------------------------------------+---------------------------------+---------------+-------------+----------------+
++---------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                    ;
++-------------------------------------+--------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                          ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+--------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 27116745733495.174794504104856 ; --            ; --          ; --             ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                            ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                    ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)      ; <None>        ; --          ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                           ; --            ; --          ; eda_simulation ;
+; PARTITION_COLOR                     ; 16764057                       ; --            ; ULA_8bit    ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING          ; --            ; ULA_8bit    ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                         ; --            ; ULA_8bit    ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                   ; --            ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; ULA_8bit                       ; MIC1          ; --          ; --             ;
++-------------------------------------+--------------------------------+---------------+-------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -93,12 +93,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:00     ; 1.0                     ; 4587 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:01     ; 1.0                     ; 4795 MB             ; 00:00:01                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4553 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4537 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4513 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:03     ; --                      ; --                  ; 00:00:04                           ;
+; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4577 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:07     ; 1.0                     ; 4793 MB             ; 00:00:03                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4536 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4530 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4507 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:11     ; --                      ; --                  ; 00:00:07                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -107,11 +107,11 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; DECOMDV-321-006  ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; DECOMDV-321-006  ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; DECOMDV-321-006  ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; DECOMDV-321-006  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DECOMDV-321-006  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; DECOMDV-304-001  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; DECOMDV-304-001  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; DECOMDV-304-001  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DECOMDV-304-001  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DECOMDV-304-001  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
