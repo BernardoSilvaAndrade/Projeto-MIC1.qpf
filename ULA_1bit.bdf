@@ -166,7 +166,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1232 816 1248 992)
+	(rect 1232 872 1248 1048)
 	(text "OUTPUT" (rect 6 1 16 39)(font "Arial" (font_size 6))(vertical))
 	(text "COUT" (rect 4 90 16 120)(font "Arial" )(vertical))
 	(pt 8 0)
@@ -795,14 +795,6 @@ applicable agreement for further details.
 	(pt 768 872)
 )
 (connector
-	(pt 1152 736)
-	(pt 1240 736)
-)
-(connector
-	(pt 1240 736)
-	(pt 1240 816)
-)
-(connector
 	(pt 608 672)
 	(pt 744 672)
 )
@@ -901,6 +893,14 @@ applicable agreement for further details.
 (connector
 	(pt 760 872)
 	(pt 760 880)
+)
+(connector
+	(pt 1152 736)
+	(pt 1240 736)
+)
+(connector
+	(pt 1240 736)
+	(pt 1240 872)
 )
 (junction (pt 744 560))
 (junction (pt 744 672))
