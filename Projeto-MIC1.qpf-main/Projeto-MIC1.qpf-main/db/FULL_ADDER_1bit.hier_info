@@ -1,0 +1,14 @@
+|FULL_ADDER_1bit
+SUM <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+CIN => inst7.IN0
+CIN => inst11.IN0
+A => inst.IN0
+A => inst10.IN0
+B => inst.IN1
+B => inst10.IN1
+EN => inst8.IN1
+EN => inst10.IN2
+EN => inst11.IN2
+COUT <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+
+
