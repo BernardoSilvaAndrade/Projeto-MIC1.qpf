@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE AUTO
-set_global_assignment -name TOP_LEVEL_ENTITY MPC_GENERATOR
+set_global_assignment -name TOP_LEVEL_ENTITY SHIFTER
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:18:14  APRIL 03, 2025"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
@@ -49,9 +49,11 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_simulation
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name BDF_FILE Register_32bit.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE CONTROL_UNIT_istore.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE CONTROL_UNIT_iload.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE CONTROL_UNIT_iadd_isub.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE CONTROL_UNIT_bipush.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE mpc_generator.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE REGISTER32bit.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE ULA_32bit_ADD.vwf
@@ -70,8 +72,13 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE ULA_1bit.vwf
 set_global_assignment -name BDF_FILE SHIFTER.bdf
 set_global_assignment -name BDF_FILE REGISTER_8bit.bdf
 set_global_assignment -name BDF_FILE REGISTER_32bit.bdf
-set_global_assignment -name BDF_FILE SRA1.bdf
-set_global_assignment -name BDF_FILE SLL8.bdf
 set_global_assignment -name BDF_FILE MPC_GENERATOR.bdf
+set_global_assignment -name QIP_FILE CONTROL_STORE.qip
+set_global_assignment -name BDF_FILE CONTROL_UNIT.bdf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/Aluno/Desktop/Projeto-MIC1.qpf-main/Projeto-MIC1.qpf-main/Projeto-MIC1.qpf-main/CONTROL_UNIT_bipush.vwf"
+set_global_assignment -name BDF_FILE SLL8.bdf
+set_global_assignment -name BDF_FILE SRA1.bdf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/Aluno/Desktop/Projeto-MIC1.qpf-main/Projeto-MIC1.qpf-main/mpc_generator.vwf"

@@ -1,6 +1,6 @@
 Simulator report for MIC1
-Mon Oct 13 13:25:30 2025
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Mon Oct 20 09:51:20 2025
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -10,12 +10,13 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Simulator Summary
   3. Simulator Settings
   4. Simulation Waveforms
-  5. Coverage Summary
-  6. Complete 1/0-Value Coverage
-  7. Missing 1-Value Coverage
-  8. Missing 0-Value Coverage
-  9. Simulator INI Usage
- 10. Simulator Messages
+  5. |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ALTSYNCRAM
+  6. Coverage Summary
+  7. Complete 1/0-Value Coverage
+  8. Missing 1-Value Coverage
+  9. Missing 0-Value Coverage
+ 10. Simulator INI Usage
+ 11. Simulator Messages
 
 
 
@@ -45,48 +46,54 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 1.4 us       ;
-; Simulation Netlist Size     ; 60 nodes     ;
-; Simulation Coverage         ;      55.00 % ;
-; Total Number of Transitions ; 101          ;
+; Simulation Netlist Size     ; 130 nodes    ;
+; Simulation Coverage         ;      39.23 % ;
+; Total Number of Transitions ; 175          ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone II   ;
 +-----------------------------+--------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Simulator Settings                                                                                                                                                                                ;
-+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+---------------+
-; Option                                                                                     ; Setting                                                                              ; Default Value ;
-+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+---------------+
-; Simulation mode                                                                            ; Functional                                                                           ; Timing        ;
-; Start time                                                                                 ; 0 ns                                                                                 ; 0 ns          ;
-; Simulation results format                                                                  ; VWF                                                                                  ;               ;
-; Vector input source                                                                        ; C:/Users/Aluno/Desktop/Projeto-MIC1.qpf-main/Projeto-MIC1.qpf-main/mpc_generator.vwf ;               ;
-; Add pins automatically to simulation output waveforms                                      ; On                                                                                   ; On            ;
-; Check outputs                                                                              ; Off                                                                                  ; Off           ;
-; Report simulation coverage                                                                 ; On                                                                                   ; On            ;
-; Display complete 1/0 value coverage report                                                 ; On                                                                                   ; On            ;
-; Display missing 1-value coverage report                                                    ; On                                                                                   ; On            ;
-; Display missing 0-value coverage report                                                    ; On                                                                                   ; On            ;
-; Detect setup and hold time violations                                                      ; Off                                                                                  ; Off           ;
-; Detect glitches                                                                            ; Off                                                                                  ; Off           ;
-; Disable timing delays in Timing Simulation                                                 ; Off                                                                                  ; Off           ;
-; Generate Signal Activity File                                                              ; Off                                                                                  ; Off           ;
-; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                                                  ; Off           ;
-; Group bus channels in simulation results                                                   ; Off                                                                                  ; Off           ;
-; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                                                   ; On            ;
-; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                                           ; INPUT_EDGE    ;
-; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                                                  ; Off           ;
-; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                                                  ;               ;
-; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                                                 ; Auto          ;
-+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+---------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                                                                            ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                                                                          ; Default Value ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                                                                                       ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                                                                             ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                                                                              ;               ;
+; Vector input source                                                                        ; C:/Users/Aluno/Desktop/Projeto-MIC1.qpf-main/Projeto-MIC1.qpf-main/Projeto-MIC1.qpf-main/CONTROL_UNIT_bipush.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                                                                               ; On            ;
+; Check outputs                                                                              ; Off                                                                                                              ; Off           ;
+; Report simulation coverage                                                                 ; On                                                                                                               ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                                                                               ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                                                                               ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                                                                               ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                                                                              ; Off           ;
+; Detect glitches                                                                            ; Off                                                                                                              ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                                                                              ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                                                                              ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                                                                              ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                                                                              ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                                                                               ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                                                                       ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                                                                              ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                                                                              ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                                                                             ; Auto          ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------+---------------+
 
 
 +----------------------+
 ; Simulation Waveforms ;
 +----------------------+
 Waveform report data cannot be output to ASCII.
-Please use Quartus II 64-Bit to view the waveform report data.
+Please use Quartus II 32-bit to view the waveform report data.
+
+
++------------------------------------------------------------------------------------------------------------+
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ALTSYNCRAM ;
++------------------------------------------------------------------------------------------------------------+
+Please refer to fitter text-based report (*.fit.rpt) to view logical memory report content in ASCII.
 
 
 +--------------------------------------------------------------------+
@@ -94,127 +101,245 @@ Please use Quartus II 64-Bit to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      55.00 % ;
-; Total nodes checked                                 ; 60           ;
-; Total output ports checked                          ; 60           ;
-; Total output ports with complete 1/0-value coverage ; 33           ;
-; Total output ports with no 1/0-value coverage       ; 26           ;
-; Total output ports with no 1-value coverage         ; 26           ;
-; Total output ports with no 0-value coverage         ; 27           ;
+; Total coverage as a percentage                      ;      39.23 % ;
+; Total nodes checked                                 ; 130          ;
+; Total output ports checked                          ; 130          ;
+; Total output ports with complete 1/0-value coverage ; 51           ;
+; Total output ports with no 1/0-value coverage       ; 74           ;
+; Total output ports with no 1-value coverage         ; 74           ;
+; Total output ports with no 0-value coverage         ; 79           ;
 +-----------------------------------------------------+--------------+
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+------------------------------------------------------------------------------------+
-; Complete 1/0-Value Coverage                                                        ;
-+--------------------------------+--------------------------------+------------------+
-; Node Name                      ; Output Port Name               ; Output Port Type ;
-+--------------------------------+--------------------------------+------------------+
-; |MPC_GENERATOR|MPC[8]          ; |MPC_GENERATOR|MPC[8]          ; pin_out          ;
-; |MPC_GENERATOR|MPC[7]          ; |MPC_GENERATOR|MPC[7]          ; pin_out          ;
-; |MPC_GENERATOR|MPC[5]          ; |MPC_GENERATOR|MPC[5]          ; pin_out          ;
-; |MPC_GENERATOR|MPC[2]          ; |MPC_GENERATOR|MPC[2]          ; pin_out          ;
-; |MPC_GENERATOR|MPC[1]          ; |MPC_GENERATOR|MPC[1]          ; pin_out          ;
-; |MPC_GENERATOR|MPC[0]          ; |MPC_GENERATOR|MPC[0]          ; pin_out          ;
-; |MPC_GENERATOR|inst3[8]        ; |MPC_GENERATOR|inst3[8]        ; regout           ;
-; |MPC_GENERATOR|inst3[7]        ; |MPC_GENERATOR|inst3[7]        ; regout           ;
-; |MPC_GENERATOR|inst3[5]        ; |MPC_GENERATOR|inst3[5]        ; regout           ;
-; |MPC_GENERATOR|inst3[2]        ; |MPC_GENERATOR|inst3[2]        ; regout           ;
-; |MPC_GENERATOR|inst3[1]        ; |MPC_GENERATOR|inst3[1]        ; regout           ;
-; |MPC_GENERATOR|inst3[0]        ; |MPC_GENERATOR|inst3[0]        ; regout           ;
-; |MPC_GENERATOR|CLOCK           ; |MPC_GENERATOR|CLOCK           ; out              ;
-; |MPC_GENERATOR|inst2           ; |MPC_GENERATOR|inst2           ; out0             ;
-; |MPC_GENERATOR|inst1           ; |MPC_GENERATOR|inst1           ; out0             ;
-; |MPC_GENERATOR|JAM[2]          ; |MPC_GENERATOR|JAM[2]          ; out              ;
-; |MPC_GENERATOR|JAM[1]          ; |MPC_GENERATOR|JAM[1]          ; out              ;
-; |MPC_GENERATOR|JAM[0]          ; |MPC_GENERATOR|JAM[0]          ; out              ;
-; |MPC_GENERATOR|Z               ; |MPC_GENERATOR|Z               ; out              ;
-; |MPC_GENERATOR|NEXT_ADDRESS[8] ; |MPC_GENERATOR|NEXT_ADDRESS[8] ; out              ;
-; |MPC_GENERATOR|NEXT_ADDRESS[1] ; |MPC_GENERATOR|NEXT_ADDRESS[1] ; out              ;
-; |MPC_GENERATOR|NEXT_ADDRESS[0] ; |MPC_GENERATOR|NEXT_ADDRESS[0] ; out              ;
-; |MPC_GENERATOR|inst            ; |MPC_GENERATOR|inst            ; out0             ;
-; |MPC_GENERATOR|N               ; |MPC_GENERATOR|N               ; out              ;
-; |MPC_GENERATOR|inst6[7]        ; |MPC_GENERATOR|inst6[7]        ; out0             ;
-; |MPC_GENERATOR|inst6[5]        ; |MPC_GENERATOR|inst6[5]        ; out0             ;
-; |MPC_GENERATOR|inst6[2]        ; |MPC_GENERATOR|inst6[2]        ; out0             ;
-; |MPC_GENERATOR|inst6[1]        ; |MPC_GENERATOR|inst6[1]        ; out0             ;
-; |MPC_GENERATOR|inst6[0]        ; |MPC_GENERATOR|inst6[0]        ; out0             ;
-; |MPC_GENERATOR|inst5[7]        ; |MPC_GENERATOR|inst5[7]        ; out0             ;
-; |MPC_GENERATOR|inst5[5]        ; |MPC_GENERATOR|inst5[5]        ; out0             ;
-; |MPC_GENERATOR|inst5[2]        ; |MPC_GENERATOR|inst5[2]        ; out0             ;
-; |MPC_GENERATOR|inst5[0]        ; |MPC_GENERATOR|inst5[0]        ; out0             ;
-+--------------------------------+--------------------------------+------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                                                ;
++---------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                     ; Output Port Name                                                                                        ; Output Port Type ;
++---------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
+; |CONTROL_UNIT|WRITE_ENABLE                                                                                    ; |CONTROL_UNIT|WRITE_ENABLE                                                                              ; pin_out          ;
+; |CONTROL_UNIT|flip                                                                                            ; |CONTROL_UNIT|flip                                                                                      ; regout           ;
+; |CONTROL_UNIT|CLOCK                                                                                           ; |CONTROL_UNIT|CLOCK                                                                                     ; out              ;
+; |CONTROL_UNIT|MIR[31]                                                                                         ; |CONTROL_UNIT|MIR[31]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[28]                                                                                         ; |CONTROL_UNIT|MIR[28]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[27]                                                                                         ; |CONTROL_UNIT|MIR[27]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[26]                                                                                         ; |CONTROL_UNIT|MIR[26]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[21]                                                                                         ; |CONTROL_UNIT|MIR[21]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[16]                                                                                         ; |CONTROL_UNIT|MIR[16]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[13]                                                                                         ; |CONTROL_UNIT|MIR[13]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[10]                                                                                         ; |CONTROL_UNIT|MIR[10]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[9]                                                                                          ; |CONTROL_UNIT|MIR[9]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|MIR[8]                                                                                          ; |CONTROL_UNIT|MIR[8]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|MIR[7]                                                                                          ; |CONTROL_UNIT|MIR[7]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|MIR[6]                                                                                          ; |CONTROL_UNIT|MIR[6]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|MIR[4]                                                                                          ; |CONTROL_UNIT|MIR[4]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|MIR[2]                                                                                          ; |CONTROL_UNIT|MIR[2]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|MIR[1]                                                                                          ; |CONTROL_UNIT|MIR[1]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|MIR[0]                                                                                          ; |CONTROL_UNIT|MIR[0]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|MPC[4]                                                                                          ; |CONTROL_UNIT|MPC[4]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|MPC[1]                                                                                          ; |CONTROL_UNIT|MPC[1]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|MPC[0]                                                                                          ; |CONTROL_UNIT|MPC[0]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|flop[6]                                                                                         ; |CONTROL_UNIT|flop[6]                                                                                   ; regout           ;
+; |CONTROL_UNIT|flop[3]                                                                                         ; |CONTROL_UNIT|flop[3]                                                                                   ; regout           ;
+; |CONTROL_UNIT|flop[1]                                                                                         ; |CONTROL_UNIT|flop[1]                                                                                   ; regout           ;
+; |CONTROL_UNIT|MBR_IN[6]                                                                                       ; |CONTROL_UNIT|MBR_IN[6]                                                                                 ; out              ;
+; |CONTROL_UNIT|MBR_IN[3]                                                                                       ; |CONTROL_UNIT|MBR_IN[3]                                                                                 ; out              ;
+; |CONTROL_UNIT|MBR_IN[1]                                                                                       ; |CONTROL_UNIT|MBR_IN[1]                                                                                 ; out              ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[4]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[4]                                                              ; regout           ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[1]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[1]                                                              ; regout           ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[0]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[0]                                                              ; regout           ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst6[4]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst6[4]                                                              ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst6[1]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst6[1]                                                              ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst6[0]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst6[0]                                                              ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[4]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[4]                                                              ; out0             ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a0  ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[0]  ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a1  ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[1]  ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a2  ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[2]  ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a4  ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[4]  ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a6  ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[6]  ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a7  ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[7]  ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a8  ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[8]  ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a9  ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[9]  ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a10 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[10] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a13 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[13] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a16 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[16] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a21 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[21] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a26 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[26] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a27 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[27] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a28 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[28] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a31 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[31] ; portadataout0    ;
++---------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+------------------------------------------------------------------------------------+
-; Missing 1-Value Coverage                                                           ;
-+--------------------------------+--------------------------------+------------------+
-; Node Name                      ; Output Port Name               ; Output Port Type ;
-+--------------------------------+--------------------------------+------------------+
-; |MPC_GENERATOR|MPC[6]          ; |MPC_GENERATOR|MPC[6]          ; pin_out          ;
-; |MPC_GENERATOR|MPC[4]          ; |MPC_GENERATOR|MPC[4]          ; pin_out          ;
-; |MPC_GENERATOR|MPC[3]          ; |MPC_GENERATOR|MPC[3]          ; pin_out          ;
-; |MPC_GENERATOR|inst3[6]        ; |MPC_GENERATOR|inst3[6]        ; regout           ;
-; |MPC_GENERATOR|inst3[4]        ; |MPC_GENERATOR|inst3[4]        ; regout           ;
-; |MPC_GENERATOR|inst3[3]        ; |MPC_GENERATOR|inst3[3]        ; regout           ;
-; |MPC_GENERATOR|NEXT_ADDRESS[7] ; |MPC_GENERATOR|NEXT_ADDRESS[7] ; out              ;
-; |MPC_GENERATOR|NEXT_ADDRESS[6] ; |MPC_GENERATOR|NEXT_ADDRESS[6] ; out              ;
-; |MPC_GENERATOR|NEXT_ADDRESS[5] ; |MPC_GENERATOR|NEXT_ADDRESS[5] ; out              ;
-; |MPC_GENERATOR|NEXT_ADDRESS[4] ; |MPC_GENERATOR|NEXT_ADDRESS[4] ; out              ;
-; |MPC_GENERATOR|NEXT_ADDRESS[3] ; |MPC_GENERATOR|NEXT_ADDRESS[3] ; out              ;
-; |MPC_GENERATOR|inst6[6]        ; |MPC_GENERATOR|inst6[6]        ; out0             ;
-; |MPC_GENERATOR|inst6[4]        ; |MPC_GENERATOR|inst6[4]        ; out0             ;
-; |MPC_GENERATOR|inst6[3]        ; |MPC_GENERATOR|inst6[3]        ; out0             ;
-; |MPC_GENERATOR|inst5[6]        ; |MPC_GENERATOR|inst5[6]        ; out0             ;
-; |MPC_GENERATOR|inst5[4]        ; |MPC_GENERATOR|inst5[4]        ; out0             ;
-; |MPC_GENERATOR|inst5[3]        ; |MPC_GENERATOR|inst5[3]        ; out0             ;
-; |MPC_GENERATOR|inst5[1]        ; |MPC_GENERATOR|inst5[1]        ; out0             ;
-; |MPC_GENERATOR|MBR_IN[7]       ; |MPC_GENERATOR|MBR_IN[7]       ; out              ;
-; |MPC_GENERATOR|MBR_IN[6]       ; |MPC_GENERATOR|MBR_IN[6]       ; out              ;
-; |MPC_GENERATOR|MBR_IN[5]       ; |MPC_GENERATOR|MBR_IN[5]       ; out              ;
-; |MPC_GENERATOR|MBR_IN[4]       ; |MPC_GENERATOR|MBR_IN[4]       ; out              ;
-; |MPC_GENERATOR|MBR_IN[3]       ; |MPC_GENERATOR|MBR_IN[3]       ; out              ;
-; |MPC_GENERATOR|MBR_IN[2]       ; |MPC_GENERATOR|MBR_IN[2]       ; out              ;
-; |MPC_GENERATOR|MBR_IN[1]       ; |MPC_GENERATOR|MBR_IN[1]       ; out              ;
-; |MPC_GENERATOR|MBR_IN[0]       ; |MPC_GENERATOR|MBR_IN[0]       ; out              ;
-+--------------------------------+--------------------------------+------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                                                   ;
++---------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                     ; Output Port Name                                                                                        ; Output Port Type ;
++---------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
+; |CONTROL_UNIT|MIR[35]                                                                                         ; |CONTROL_UNIT|MIR[35]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[34]                                                                                         ; |CONTROL_UNIT|MIR[34]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[33]                                                                                         ; |CONTROL_UNIT|MIR[33]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[32]                                                                                         ; |CONTROL_UNIT|MIR[32]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[30]                                                                                         ; |CONTROL_UNIT|MIR[30]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[29]                                                                                         ; |CONTROL_UNIT|MIR[29]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[25]                                                                                         ; |CONTROL_UNIT|MIR[25]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[24]                                                                                         ; |CONTROL_UNIT|MIR[24]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[23]                                                                                         ; |CONTROL_UNIT|MIR[23]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[22]                                                                                         ; |CONTROL_UNIT|MIR[22]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[19]                                                                                         ; |CONTROL_UNIT|MIR[19]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[17]                                                                                         ; |CONTROL_UNIT|MIR[17]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[15]                                                                                         ; |CONTROL_UNIT|MIR[15]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[14]                                                                                         ; |CONTROL_UNIT|MIR[14]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[12]                                                                                         ; |CONTROL_UNIT|MIR[12]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[11]                                                                                         ; |CONTROL_UNIT|MIR[11]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[5]                                                                                          ; |CONTROL_UNIT|MIR[5]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|MIR[3]                                                                                          ; |CONTROL_UNIT|MIR[3]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|MPC[8]                                                                                          ; |CONTROL_UNIT|MPC[8]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|MPC[7]                                                                                          ; |CONTROL_UNIT|MPC[7]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|MPC[6]                                                                                          ; |CONTROL_UNIT|MPC[6]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|MPC[5]                                                                                          ; |CONTROL_UNIT|MPC[5]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|MPC[3]                                                                                          ; |CONTROL_UNIT|MPC[3]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|MPC[2]                                                                                          ; |CONTROL_UNIT|MPC[2]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|N                                                                                               ; |CONTROL_UNIT|N                                                                                         ; out              ;
+; |CONTROL_UNIT|Z                                                                                               ; |CONTROL_UNIT|Z                                                                                         ; out              ;
+; |CONTROL_UNIT|flop[7]                                                                                         ; |CONTROL_UNIT|flop[7]                                                                                   ; regout           ;
+; |CONTROL_UNIT|flop[5]                                                                                         ; |CONTROL_UNIT|flop[5]                                                                                   ; regout           ;
+; |CONTROL_UNIT|flop[2]                                                                                         ; |CONTROL_UNIT|flop[2]                                                                                   ; regout           ;
+; |CONTROL_UNIT|flop[0]                                                                                         ; |CONTROL_UNIT|flop[0]                                                                                   ; regout           ;
+; |CONTROL_UNIT|MBR_IN[7]                                                                                       ; |CONTROL_UNIT|MBR_IN[7]                                                                                 ; out              ;
+; |CONTROL_UNIT|MBR_IN[5]                                                                                       ; |CONTROL_UNIT|MBR_IN[5]                                                                                 ; out              ;
+; |CONTROL_UNIT|MBR_IN[4]                                                                                       ; |CONTROL_UNIT|MBR_IN[4]                                                                                 ; out              ;
+; |CONTROL_UNIT|MBR_IN[2]                                                                                       ; |CONTROL_UNIT|MBR_IN[2]                                                                                 ; out              ;
+; |CONTROL_UNIT|MBR_IN[0]                                                                                       ; |CONTROL_UNIT|MBR_IN[0]                                                                                 ; out              ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[8]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[8]                                                              ; regout           ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[7]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[7]                                                              ; regout           ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[6]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[6]                                                              ; regout           ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[5]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[5]                                                              ; regout           ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[3]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[3]                                                              ; regout           ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[2]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[2]                                                              ; regout           ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst2                                                                       ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst2                                                                 ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst1                                                                       ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst1                                                                 ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst                                                                        ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst                                                                  ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst6[7]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst6[7]                                                              ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst6[6]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst6[6]                                                              ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst6[5]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst6[5]                                                              ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst6[3]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst6[3]                                                              ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst6[2]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst6[2]                                                              ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[7]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[7]                                                              ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[6]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[6]                                                              ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[5]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[5]                                                              ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[3]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[3]                                                              ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[2]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[2]                                                              ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[1]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[1]                                                              ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[0]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[0]                                                              ; out0             ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a3  ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[3]  ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a5  ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[5]  ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a11 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[11] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a12 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[12] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a14 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[14] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a15 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[15] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a17 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[17] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a19 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[19] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a22 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[22] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a23 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[23] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a24 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[24] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a25 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[25] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a29 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[29] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a30 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[30] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a32 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[32] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a33 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[33] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a34 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[34] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a35 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[35] ; portadataout0    ;
++---------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+------------------------------------------------------------------------------------+
-; Missing 0-Value Coverage                                                           ;
-+--------------------------------+--------------------------------+------------------+
-; Node Name                      ; Output Port Name               ; Output Port Type ;
-+--------------------------------+--------------------------------+------------------+
-; |MPC_GENERATOR|MPC[6]          ; |MPC_GENERATOR|MPC[6]          ; pin_out          ;
-; |MPC_GENERATOR|MPC[4]          ; |MPC_GENERATOR|MPC[4]          ; pin_out          ;
-; |MPC_GENERATOR|MPC[3]          ; |MPC_GENERATOR|MPC[3]          ; pin_out          ;
-; |MPC_GENERATOR|inst3[6]        ; |MPC_GENERATOR|inst3[6]        ; regout           ;
-; |MPC_GENERATOR|inst3[4]        ; |MPC_GENERATOR|inst3[4]        ; regout           ;
-; |MPC_GENERATOR|inst3[3]        ; |MPC_GENERATOR|inst3[3]        ; regout           ;
-; |MPC_GENERATOR|NEXT_ADDRESS[7] ; |MPC_GENERATOR|NEXT_ADDRESS[7] ; out              ;
-; |MPC_GENERATOR|NEXT_ADDRESS[6] ; |MPC_GENERATOR|NEXT_ADDRESS[6] ; out              ;
-; |MPC_GENERATOR|NEXT_ADDRESS[5] ; |MPC_GENERATOR|NEXT_ADDRESS[5] ; out              ;
-; |MPC_GENERATOR|NEXT_ADDRESS[4] ; |MPC_GENERATOR|NEXT_ADDRESS[4] ; out              ;
-; |MPC_GENERATOR|NEXT_ADDRESS[3] ; |MPC_GENERATOR|NEXT_ADDRESS[3] ; out              ;
-; |MPC_GENERATOR|NEXT_ADDRESS[2] ; |MPC_GENERATOR|NEXT_ADDRESS[2] ; out              ;
-; |MPC_GENERATOR|inst6[6]        ; |MPC_GENERATOR|inst6[6]        ; out0             ;
-; |MPC_GENERATOR|inst6[4]        ; |MPC_GENERATOR|inst6[4]        ; out0             ;
-; |MPC_GENERATOR|inst6[3]        ; |MPC_GENERATOR|inst6[3]        ; out0             ;
-; |MPC_GENERATOR|inst5[6]        ; |MPC_GENERATOR|inst5[6]        ; out0             ;
-; |MPC_GENERATOR|inst5[4]        ; |MPC_GENERATOR|inst5[4]        ; out0             ;
-; |MPC_GENERATOR|inst5[3]        ; |MPC_GENERATOR|inst5[3]        ; out0             ;
-; |MPC_GENERATOR|inst5[1]        ; |MPC_GENERATOR|inst5[1]        ; out0             ;
-; |MPC_GENERATOR|MBR_IN[7]       ; |MPC_GENERATOR|MBR_IN[7]       ; out              ;
-; |MPC_GENERATOR|MBR_IN[6]       ; |MPC_GENERATOR|MBR_IN[6]       ; out              ;
-; |MPC_GENERATOR|MBR_IN[5]       ; |MPC_GENERATOR|MBR_IN[5]       ; out              ;
-; |MPC_GENERATOR|MBR_IN[4]       ; |MPC_GENERATOR|MBR_IN[4]       ; out              ;
-; |MPC_GENERATOR|MBR_IN[3]       ; |MPC_GENERATOR|MBR_IN[3]       ; out              ;
-; |MPC_GENERATOR|MBR_IN[2]       ; |MPC_GENERATOR|MBR_IN[2]       ; out              ;
-; |MPC_GENERATOR|MBR_IN[1]       ; |MPC_GENERATOR|MBR_IN[1]       ; out              ;
-; |MPC_GENERATOR|MBR_IN[0]       ; |MPC_GENERATOR|MBR_IN[0]       ; out              ;
-+--------------------------------+--------------------------------+------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                                                   ;
++---------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                     ; Output Port Name                                                                                        ; Output Port Type ;
++---------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
+; |CONTROL_UNIT|MIR[35]                                                                                         ; |CONTROL_UNIT|MIR[35]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[34]                                                                                         ; |CONTROL_UNIT|MIR[34]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[33]                                                                                         ; |CONTROL_UNIT|MIR[33]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[32]                                                                                         ; |CONTROL_UNIT|MIR[32]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[30]                                                                                         ; |CONTROL_UNIT|MIR[30]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[29]                                                                                         ; |CONTROL_UNIT|MIR[29]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[25]                                                                                         ; |CONTROL_UNIT|MIR[25]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[24]                                                                                         ; |CONTROL_UNIT|MIR[24]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[23]                                                                                         ; |CONTROL_UNIT|MIR[23]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[22]                                                                                         ; |CONTROL_UNIT|MIR[22]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[20]                                                                                         ; |CONTROL_UNIT|MIR[20]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[19]                                                                                         ; |CONTROL_UNIT|MIR[19]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[18]                                                                                         ; |CONTROL_UNIT|MIR[18]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[17]                                                                                         ; |CONTROL_UNIT|MIR[17]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[15]                                                                                         ; |CONTROL_UNIT|MIR[15]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[14]                                                                                         ; |CONTROL_UNIT|MIR[14]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[12]                                                                                         ; |CONTROL_UNIT|MIR[12]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[11]                                                                                         ; |CONTROL_UNIT|MIR[11]                                                                                   ; pin_out          ;
+; |CONTROL_UNIT|MIR[5]                                                                                          ; |CONTROL_UNIT|MIR[5]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|MIR[3]                                                                                          ; |CONTROL_UNIT|MIR[3]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|MPC[8]                                                                                          ; |CONTROL_UNIT|MPC[8]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|MPC[7]                                                                                          ; |CONTROL_UNIT|MPC[7]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|MPC[6]                                                                                          ; |CONTROL_UNIT|MPC[6]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|MPC[5]                                                                                          ; |CONTROL_UNIT|MPC[5]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|MPC[3]                                                                                          ; |CONTROL_UNIT|MPC[3]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|MPC[2]                                                                                          ; |CONTROL_UNIT|MPC[2]                                                                                    ; pin_out          ;
+; |CONTROL_UNIT|N                                                                                               ; |CONTROL_UNIT|N                                                                                         ; out              ;
+; |CONTROL_UNIT|Z                                                                                               ; |CONTROL_UNIT|Z                                                                                         ; out              ;
+; |CONTROL_UNIT|flop[7]                                                                                         ; |CONTROL_UNIT|flop[7]                                                                                   ; regout           ;
+; |CONTROL_UNIT|flop[5]                                                                                         ; |CONTROL_UNIT|flop[5]                                                                                   ; regout           ;
+; |CONTROL_UNIT|flop[4]                                                                                         ; |CONTROL_UNIT|flop[4]                                                                                   ; regout           ;
+; |CONTROL_UNIT|flop[2]                                                                                         ; |CONTROL_UNIT|flop[2]                                                                                   ; regout           ;
+; |CONTROL_UNIT|flop[0]                                                                                         ; |CONTROL_UNIT|flop[0]                                                                                   ; regout           ;
+; |CONTROL_UNIT|MBR_IN[7]                                                                                       ; |CONTROL_UNIT|MBR_IN[7]                                                                                 ; out              ;
+; |CONTROL_UNIT|MBR_IN[5]                                                                                       ; |CONTROL_UNIT|MBR_IN[5]                                                                                 ; out              ;
+; |CONTROL_UNIT|MBR_IN[4]                                                                                       ; |CONTROL_UNIT|MBR_IN[4]                                                                                 ; out              ;
+; |CONTROL_UNIT|MBR_IN[2]                                                                                       ; |CONTROL_UNIT|MBR_IN[2]                                                                                 ; out              ;
+; |CONTROL_UNIT|MBR_IN[0]                                                                                       ; |CONTROL_UNIT|MBR_IN[0]                                                                                 ; out              ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[8]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[8]                                                              ; regout           ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[7]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[7]                                                              ; regout           ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[6]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[6]                                                              ; regout           ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[5]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[5]                                                              ; regout           ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[3]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[3]                                                              ; regout           ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[2]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst3[2]                                                              ; regout           ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst2                                                                       ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst2                                                                 ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst1                                                                       ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst1                                                                 ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst                                                                        ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst                                                                  ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst6[7]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst6[7]                                                              ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst6[6]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst6[6]                                                              ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst6[5]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst6[5]                                                              ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst6[3]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst6[3]                                                              ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst6[2]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst6[2]                                                              ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[7]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[7]                                                              ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[6]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[6]                                                              ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[5]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[5]                                                              ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[3]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[3]                                                              ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[2]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[2]                                                              ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[1]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[1]                                                              ; out0             ;
+; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[0]                                                                    ; |CONTROL_UNIT|MPC_GENERATOR:inst2|inst5[0]                                                              ; out0             ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a3  ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[3]  ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a5  ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[5]  ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a11 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[11] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a12 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[12] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a14 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[14] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a15 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[15] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a17 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[17] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a18 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[18] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a19 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[19] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a20 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[20] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a22 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[22] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a23 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[23] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a24 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[24] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a25 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[25] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a29 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[29] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a30 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[30] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a32 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[32] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a33 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[33] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a34 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[34] ; portadataout0    ;
+; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|ram_block1a35 ; |CONTROL_UNIT|CONTROL_STORE:inst|altsyncram:altsyncram_component|altsyncram_d581:auto_generated|q_a[35] ; portadataout0    ;
++---------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+------------------+
 
 
 +---------------------+
@@ -228,21 +353,21 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; Simulator Messages ;
 +--------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Simulator
+Info: Running Quartus II 32-bit Simulator
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Oct 13 13:25:30 2025
+    Info: Processing started: Mon Oct 20 09:51:20 2025
 Info: Command: quartus_sim --simulation_results_format=VWF MIC1 -c MIC1
-Info (324025): Using vector source file "C:/Users/Aluno/Desktop/Projeto-MIC1.qpf-main/Projeto-MIC1.qpf-main/mpc_generator.vwf"
+Info (324025): Using vector source file "C:/Users/Aluno/Desktop/Projeto-MIC1.qpf-main/Projeto-MIC1.qpf-main/Projeto-MIC1.qpf-main/CONTROL_UNIT_bipush.vwf"
 Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info (310002): Simulation partitioned into 1 sub-simulations
-Info (328053): Simulation coverage is      55.00 %
-Info (328052): Number of transitions in simulation is 101
+Info (328053): Simulation coverage is      39.23 %
+Info (328052): Number of transitions in simulation is 175
 Info (324045): Vector file MIC1.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
-Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4446 megabytes
-    Info: Processing ended: Mon Oct 13 13:25:31 2025
-    Info: Elapsed time: 00:00:01
+Info: Quartus II 32-bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 266 megabytes
+    Info: Processing ended: Mon Oct 20 09:51:20 2025
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
 
